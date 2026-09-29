@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -15,31 +17,147 @@
     <link rel="manifest" href="manifest.json">
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header>
-    <h1>⭐ Mis Puntos</h1>
+
+    <div class="header-content">
+
+        <h1>⭐ Mis Puntos</h1>
+
+        <button
+            class="settings-button"
+            onclick="openSettings()"
+        >
+            ⚙️
+        </button>
+
+    </div>
+
 </header>
+
 
 <main>
 
     <section id="girlsSection">
 
-        <h2>Mis niñas</h2>
+        <div class="section-title">
+
+            <h2>Mis niñas</h2>
+
+            <button
+                class="small-button"
+                onclick="addGirl()"
+            >
+                + Añadir
+            </button>
+
+        </div>
 
         <div id="girls"></div>
 
-        <button class="add-girl" onclick="addGirl()">
-            + Añadir niña
-        </button>
+    </section>
+
+
+    <section
+        id="settingsSection"
+        class="hidden"
+    >
+
+        <div class="settings-header">
+
+            <button
+                class="back-button"
+                onclick="closeSettings()"
+            >
+                ← Volver
+            </button>
+
+            <h2>⚙️ Configuración</h2>
+
+        </div>
+
+
+        <div class="settings-card">
+
+            <h3>Comportamientos</h3>
+
+            <p class="help-text">
+                Crea los comportamientos que utilizarás
+                para dar o quitar puntos.
+            </p>
+
+            <button
+                class="add-button"
+                onclick="addBehavior()"
+            >
+                + Añadir comportamiento
+            </button>
+
+            <div id="behaviors"></div>
+
+        </div>
+
+
+        <div class="settings-card">
+
+            <h3>Recompensas</h3>
+
+            <p class="help-text">
+                Define objetivos y recompensas para
+                conseguirlos.
+            </p>
+
+            <button
+                class="add-button"
+                onclick="addReward()"
+            >
+                + Añadir recompensa
+            </button>
+
+            <div id="rewards"></div>
+
+        </div>
+
+
+        <div class="settings-card">
+
+            <h3>Datos</h3>
+
+            <button
+                class="add-button"
+                onclick="exportData()"
+            >
+                💾 Exportar copia de seguridad
+            </button>
+
+            <button
+                class="add-button secondary"
+                onclick="importData()"
+            >
+                📥 Importar copia de seguridad
+            </button>
+
+        </div>
 
     </section>
 
 </main>
 
+
+<input
+    type="file"
+    id="importFile"
+    accept=".json"
+    style="display:none"
+>
+
+
 <script src="app.js"></script>
 
 </body>
+
 </html>
