@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+        "Helvetica Neue", Arial, sans-serif;
+
+    background: #f5f5f7;
+    color: #1d1d1f;
+}
+
+header {
+    background: white;
+    padding: 18px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+main {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.girl {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.girl-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.girl-name {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.points {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 15px 0 20px;
+    text-align: center;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    border-radius: 14px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.positive {
+    background: #dff7e7;
+}
+
+.negative {
+    background: #ffe1e1;
+}
+
+.add-girl {
+    width: 100%;
+    background: #007aff;
+    color: white;
+    margin-top: 10px;
+}
+
+.delete {
+    background: transparent;
+    color: #ff3b30;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.history {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.history-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.history-positive {
+    color: #16803c;
+}
+
+.history-negative {
+    color: #d93025;
+}
